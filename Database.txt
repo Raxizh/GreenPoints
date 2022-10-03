@@ -1,0 +1,42 @@
+create database FoodItems;
+
+create user TeamOne identified with mysql_native_password by password
+
+grant all on FoodItems to TeamOne
+
+flush privliges;
+
+use FoodItems
+
+create table Foods (
+  id int auto_increment,
+  food_type varchar(50),
+  food_name varchar(100),
+  food_price varchar(100),
+  calorie_num varchar(50),
+  description varchar(200),
+  primary key (id)
+ );
+ 
+ insert into Foods (food_type, food_name, food_price, calorie_num, description) values (
+    "Meat",
+    "16 oz. Ribeye Steak",
+    "$17.81",
+    "1320",
+    "The ribeye is a boneless rib steak from the rib section", 
+   ),
+   (
+    "Fish",
+    "4 oz. Lobster Tail",
+    "12.95",
+    "439",
+    "Shellfish" 
+   ),
+   (
+      "Vegetable",
+      "5.3 oz. Broccoli Stalk",
+      "3.04",
+      "45",
+      "Medium stalk of broccoli" 
+   );
+    
